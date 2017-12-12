@@ -48,7 +48,6 @@ class TaskHeader: BaseCell {
 
     }
     
-    
     @objc func changeColor(sender: UITextField) {
         taskNameTextField.textColor = .black
     }
@@ -56,6 +55,7 @@ class TaskHeader: BaseCell {
     // Put the name enter in taskNameTextField in the array Tasks in class CollectionViewController
     @objc func addTask(sender: UIButton) {
         collectionViewController?.addNewTask(taskName: taskNameTextField.text!)
-        taskNameTextField.text = ""
+        taskNameTextField.text = "Enter New Task"
+        taskNameTextField.textColor = UIColor.lightGray
     }
 }

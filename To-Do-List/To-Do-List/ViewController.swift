@@ -9,7 +9,7 @@
 import UIKit
 
 class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,6 +61,5 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         tasks.append(taskName)
         collectionView?.reloadData()
     }
-    
 }
 
