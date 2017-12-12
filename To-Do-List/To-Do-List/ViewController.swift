@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewController: UICollectionViewController {
+class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +31,10 @@ class CollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // method for cell had a name + index at indexPath
         return collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 50)
     }
     
 }
