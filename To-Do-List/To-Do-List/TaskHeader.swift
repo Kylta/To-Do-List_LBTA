@@ -11,21 +11,23 @@ import UIKit
 // Class create for use on CollectionView register
 class TaskHeader: BaseCell {
 
-    // Name for item in cells
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Header"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    // For user enter a name inside this text field
+    let taskNameTextField: UITextField = {
+       let textField = UITextField()
+        textField.text = "Enter Task Name"
+        textField.textColor = UIColor.black
+        textField.clearsOnBeginEditing = true
+        textField.borderStyle = .roundedRect
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
     }()
     
     override func setupViews() {
         
-        addSubview(nameLabel)
+        addSubview(taskNameTextField)
         // Constraint for cells
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v0]-8-|", options: [], metrics: nil, views: ["v0": nameLabel]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-8-[v0]-8-|", options: [], metrics: nil, views: ["v0": nameLabel]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v0]-8-|", options: [], metrics: nil, views: ["v0": taskNameTextField]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-8-[v0]-8-|", options: [], metrics: nil, views: ["v0": taskNameTextField]))
         
     }
 }
