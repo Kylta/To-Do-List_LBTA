@@ -30,7 +30,8 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     // Index for cells
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // method for cell had a name + index at indexPath
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let taskCell =  collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! TaskCell
+        return taskCell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
