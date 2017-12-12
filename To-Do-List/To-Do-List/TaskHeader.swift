@@ -11,6 +11,8 @@ import UIKit
 // Class create for use on CollectionView register
 class TaskHeader: BaseCell {
 
+    var collectionViewController: CollectionViewController?
+    
     // For user enter a name inside this text field
     let taskNameTextField: UITextField = {
        let textField = UITextField()
@@ -51,7 +53,9 @@ class TaskHeader: BaseCell {
         taskNameTextField.textColor = .black
     }
     
+    // Put the name enter in taskNameTextField in the array Tasks in class CollectionViewController
     @objc func addTask(sender: UIButton) {
-        
+        collectionViewController?.addNewTask(taskName: taskNameTextField.text!)
+        taskNameTextField.text = ""
     }
 }

@@ -46,7 +46,9 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
     // Method create for header with index
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath)
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath) as! TaskHeader
+        header.collectionViewController = self
+        return header
     }
     
     // Method for header size
