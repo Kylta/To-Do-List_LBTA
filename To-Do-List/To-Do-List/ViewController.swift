@@ -24,16 +24,18 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         
     }
     
+    var tasks = ["Buy groceries", "Fill up gas", "Pay bills"]
+    
     // Number of cells
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return tasks.count
     }
     
     // Index for cells
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // method for cell had a name + index at indexPath
         let taskCell =  collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! TaskCell
-        taskCell.nameLabel.text = "Sample Task \(indexPath.item)"
+        taskCell.nameLabel.text = tasks[indexPath.item]
         return taskCell
     }
     

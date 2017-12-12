@@ -15,7 +15,7 @@ class TaskHeader: BaseCell {
     let taskNameTextField: UITextField = {
        let textField = UITextField()
         textField.text = "Enter Task Name"
-        textField.textColor = UIColor.black
+        textField.textColor = UIColor.lightGray
         textField.clearsOnBeginEditing = true
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -34,10 +34,24 @@ class TaskHeader: BaseCell {
         addSubview(taskNameTextField)
         addSubview(addTaskButton)
         
+        // Target for change text color when edited
+        taskNameTextField.addTarget(self, action: #selector(changeColor(sender:)), for: .editingChanged)
+        addTaskButton.addTarget(self, action: #selector(addTask(sender:)), for: .touchUpInside)
+        
+        
         // Constraint for cells + header
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v0]-[v1(80)]-8-|", options: [], metrics: nil, views: ["v0": taskNameTextField, "v1": addTaskButton]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-24-[v0]-24-|", options: [], metrics: nil, views: ["v0": taskNameTextField]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-8-[v0]-8-|", options: [], metrics: nil, views: ["v0": addTaskButton]))
+
+    }
+    
+    
+    @objc func changeColor(sender: UITextField) {
+        taskNameTextField.textColor = .black
+    }
+    
+    @objc func addTask(sender: UIButton) {
         
     }
 }
