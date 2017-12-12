@@ -54,5 +54,11 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         return CGSize(width: view.frame.width, height: 100)
     }
     
+    // Method for add new task in array Task
+    func addNewTask(taskName: String) {
+        tasks.append(taskName)
+        collectionView?.reloadData()
+    }
+    
 }
 
