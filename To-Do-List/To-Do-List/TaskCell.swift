@@ -9,16 +9,8 @@
 import UIKit
 
 // Class create for use on CollectionView register
-class TaskCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupViews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+class TaskCell: BaseCell {
+
     // Name for item in cells
     let nameLabel: UILabel = {
         let label = UILabel()
@@ -28,7 +20,7 @@ class TaskCell: UICollectionViewCell {
         return label
     }()
     
-    func setupViews() {
+    override func setupViews() {
         
         addSubview(nameLabel)
         // Constraint for cells

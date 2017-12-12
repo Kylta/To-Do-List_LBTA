@@ -13,6 +13,7 @@
 		46F085951FDFFFC70056CEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F085931FDFFFC70056CEEE /* LaunchScreen.storyboard */; };
 		46F0859D1FE004B60056CEEE /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F0859C1FE004B60056CEEE /* TaskCell.swift */; };
 		46F0859F1FE00CEF0056CEEE /* TaskHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F0859E1FE00CEF0056CEEE /* TaskHeader.swift */; };
+		46F085A11FE011B40056CEEE /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F085A01FE011B40056CEEE /* BaseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		46F085961FDFFFC70056CEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46F0859C1FE004B60056CEEE /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		46F0859E1FE00CEF0056CEEE /* TaskHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHeader.swift; sourceTree = "<group>"; };
+		46F085A01FE011B40056CEEE /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				46F0858A1FDFFFC70056CEEE /* AppDelegate.swift */,
 				46F0858C1FDFFFC70056CEEE /* ViewController.swift */,
 				46F0859C1FE004B60056CEEE /* TaskCell.swift */,
+				46F085A01FE011B40056CEEE /* BaseCell.swift */,
 				46F0859E1FE00CEF0056CEEE /* TaskHeader.swift */,
 				46F085911FDFFFC70056CEEE /* Assets.xcassets */,
 				46F085931FDFFFC70056CEEE /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				46F0858D1FDFFFC70056CEEE /* ViewController.swift in Sources */,
 				46F0859D1FE004B60056CEEE /* TaskCell.swift in Sources */,
 				46F0858B1FDFFFC70056CEEE /* AppDelegate.swift in Sources */,
+				46F085A11FE011B40056CEEE /* BaseCell.swift in Sources */,
 				46F0859F1FE00CEF0056CEEE /* TaskHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
