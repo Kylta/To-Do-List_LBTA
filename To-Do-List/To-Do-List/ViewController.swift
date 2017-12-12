@@ -17,8 +17,10 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         collectionView?.backgroundColor = .white
         // For scroll cells on vertical
         collectionView?.alwaysBounceVertical =  true
-        // Create class for cells + use cell identifier
+        // add register cells at collectionView
         collectionView?.register(TaskCell.self, forCellWithReuseIdentifier: "cellId")
+        // add register header at collectionView
+        collectionView?.register(TaskHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
         
     }
     
@@ -35,8 +37,19 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         return taskCell
     }
     
+    // Size of cells (items)
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 50)
+    }
+    
+    // Method create for header with index
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath)
+    }
+    
+    // Method for header size
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 100)
     }
     
 }
